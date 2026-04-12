@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-DOM</title>
+</head>
+
+<body>
+
+  <h1 id="h1">JS-DOM</h1>
+  <h1>aaaaaaaaaaaaaaaaaaaaa</h1>
+  <h1>bbbbbbbbbbbbbbbbbbbbbbb</h1>
+
+  <script>
+    let h1 = document.querySelector('#h1');
+    let h1s = document.querySelectorAll('h1');
+
+    h1.innerHTML = 'JS-DOM-修改了h1标签的内容';
+    h1s[2].innerHTML = 'JS-DOM-修改了h1标签的内容';
+
+  </script>
+</body>
+
+</html>

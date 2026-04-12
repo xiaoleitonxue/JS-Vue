@@ -11,7 +11,12 @@
   <input type="button" id="btn2" value="点我一下试试2">
 
   <script>
-    
+    document.querySelector('#btn1').addEventListener('click', function () {
+      alert('点击了按钮1')
+    });
+    document.querySelector('#btn2').onclick = function () {
+      alert('点击了按钮2')
+    }
   </script>
 </body>
 </html>

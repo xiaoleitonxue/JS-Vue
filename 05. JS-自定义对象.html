@@ -9,7 +9,52 @@
   
 
   <script>
-   
+    //1.自定义对象
+    let person = {
+      name: '张三',
+      age: 20,
+      gender: '男',
+      sing(){
+        alert(this.name + '我正在唱歌...');
+        console.log('我会唱歌');
+      },
+      dance(){
+        alert(this.name + '我正在跳舞...');
+        console.log('我会跳舞');
+      },
+      error:()=> {
+        alert(this.name + '我正在出错...');
+        console.log('我会出错');
+      }
+      
+    };
+
+    //2.访问对象属性/方法
+    
+    alert(person.name);
+    person.sing();
+    person.dance();
+    person.error();
+
+
+    //3.json-js对象标记法
+    let person1 = {
+      name: '张三',
+      age: 20,
+      gender: '男',
+    }
+
+    //alert(person1);
+    alert(JSON.stringify(person1));
+
+    let personjson = '{"name":"张三","age":20,"gender":"男"}';
+
+    let person2 = JSON.parse(personjson);
+
+    alert(person2.name);
+
+
+
   </script>
 </body>
 </html>
