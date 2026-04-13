@@ -15,12 +15,51 @@
     <script>
         //发送GET请求
         document.querySelector('#btnGet').addEventListener('click', () => {
+            // axios({
+            //     method: 'get',
+            //     url: 'https://mock.apifox.cn/m1/3083103-0-default/emps/list',
+            // }).then((result) => {
+            //     console.log(result.data);   
+            // }).catch((err) => {
+            //     console.error('Error fetching data:', err);
+            // });
+
+
+            axios.get('https://mock.apifox.cn/m1/3083103-0-default/emps/list')
+                .then((result) => {
+                    console.log(result.data);   
+                })
+                .catch((err) => {
+                    console.error('Error fetching data:', err);
+                });
+
            
         })
         
         //发送POST请求
         document.querySelector('#btnPost').addEventListener('click', () => {
-            
+            // axios({
+            //     method: 'post',
+            //     url: 'https://mock.apifox.cn/m1/3083103-0-default/emps/update',
+            //     data: {
+            //         id: 1
+            //     }
+            // }).then((result) => {
+            //     console.log(result.data);   
+            // }).catch((err) => {
+            //     console.error('Error fetching data:', err);
+            // });
+
+            axios.post('https://mock.apifox.cn/m1/3083103-0-default/emps/update', {
+                id: 1
+            })
+            .then((result) => {
+                console.log(result.data);   
+            })
+            .catch((err) => {
+                console.error('Error fetching data:', err);
+            });
+
         })
     </script>
 </body>
